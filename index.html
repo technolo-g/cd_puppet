@@ -18,6 +18,9 @@
         font-weight: 400;
         margin-bottom: 0;
       }
+      img {
+        max-width: 90%;
+      }
       .remark-slide-content h1 { font-size: 3em; }
       .remark-slide-content h2 { font-size: 2em; }
       .remark-slide-content h3 { font-size: 1.6em; }
@@ -145,7 +148,7 @@ layout: false
 
   A Continuous Delivery pipeline.red[*] is a name for the system that brings software through its lifecycle. This normally begins with pre-commit testing and continues through commit testing, packaging of the artifact, automated acceptance testing, deployment to TEST, deployment to STAGE, and deployment to PROD
 
-
+![](images/chart-continuous-delivery.png)
 
 .footnote[.red[*] This term was coined by the book Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation ]
 ]
@@ -174,9 +177,10 @@ layout: false
 
 - Long time to production for a feature or bufix
 
-- Manual labor.red[*]
+- Manual labor
 
-.footnote[.red[*] Laziness is good! ]
+![](images/giphy.gif)
+
 ]
 
 ---
