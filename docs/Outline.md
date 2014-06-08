@@ -85,6 +85,8 @@
    2. First priority is to fix the builds. Having a broken build in the system is a major problem with this process and will stop all development. Keeping builds working must be held as the highest of priorities. [SLIDE 13]
    3. Proper configuration management is critical to the success of the CD Pipeline. If an environment cannot be repeatedly reproduced, it is hard to glean the assurance one needs from the CD pipeline. Handcrafted works of art need to be automated before they can consider a CD pipeline [SLIDE 13]
       1. This can be addressed by adjusting the scope of the environment that needs to be spun up. Consider starting with a component of your software that runs in a less complex environment and begin automating that. Eventually you can move on to more and more complex automation around the environment. Incremental releases are good
+  4. No Cheating! [SLIDE 13]
+      1. Subverting the process can be easily done and so it is important to have full team buy-in to avoid people skipping the process.
 
 
 1. The components of a CD Pipeline
