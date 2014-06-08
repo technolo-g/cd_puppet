@@ -5,6 +5,8 @@
 1. What is Continuous Deployment (CD)? [SLIDE 2]
    1. CD is a methodology that reduces the length of feedback cycles for the teams involved in developing and releasing software by introducing automation to the error prone manual stages. [SLIDE 3]
    2. A CD Pipeline is a name for the system that brings software through its lifecycle. This normally begins with pre-commit testing and continues through commit testing, packaging of the artifact, automated acceptance testing, deployment to TEST, deployment to STAGE, and deployment to PROD
+
+
    3. What problems does CD address? [SLIDE 4]
       1. Complex, manual, risky release processes [SLIDE 5]
          1. Done differently every time
@@ -44,6 +46,8 @@
       1. Manual labor [SLIDE 5]
          1. Does anyone here like doing the same thing 3 times?
          2. What if there is a 1 in 3 chance of bringing down production with your name being the one tied to ‘Upgrading production now’ in release chat?
+
+
 1. Why would one choose CD? [SLIDE 6]
    1. Benefits to developers [SLIDE 7]
       1. Increased transparency to see what everyone is working on and align their timelines appropriate.
@@ -73,11 +77,16 @@
       3. Less on-call alerts due to stupid bugs [SLIDE 11]
       4. More insight into the various processes in software development [SLIDE 11]
       5. Higher quality, cleaner enviornments because things that should not be making it in are not [SLIDE 11]
-1. What are some of the guidelines with CD?
-   1. Very rigid process. The entire team must be on board as it requires dedication to the process in order to achieve success
-   2. First priority is to fix the builds. Having a broken build in the system is a major problem with this process and will stop all development. Keeping builds working must be held as the highest of priorities.
-   3. Proper configuration management is critical to the success of the CD Pipeline. If an environment cannot be repeatedly reproduced, it is hard to glean the assurance one needs from the CD pipeline. Handcrafted works of art need to be automated before they can consider a CD pipeline
+
+
+1. What are some of the guidelines with CD? [SLIDE 12]
+   1. Very rigid process. The entire team must be on board as it requires dedication to the process in order to achieve success [SLIDE 13]
+      1. There cannot be an attitude of polishing turds and sliding them in under the radar. That type of behaviour will easily subvert the objectives of a project like this.
+   2. First priority is to fix the builds. Having a broken build in the system is a major problem with this process and will stop all development. Keeping builds working must be held as the highest of priorities. [SLIDE 13]
+   3. Proper configuration management is critical to the success of the CD Pipeline. If an environment cannot be repeatedly reproduced, it is hard to glean the assurance one needs from the CD pipeline. Handcrafted works of art need to be automated before they can consider a CD pipeline [SLIDE 13]
       1. This can be addressed by adjusting the scope of the environment that needs to be spun up. Consider starting with a component of your software that runs in a less complex environment and begin automating that. Eventually you can move on to more and more complex automation around the environment. Incremental releases are good
+
+
 1. The components of a CD Pipeline
    1. The components
       1. Version control
