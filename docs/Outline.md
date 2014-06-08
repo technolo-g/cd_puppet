@@ -2,13 +2,15 @@
 
 ## Outline
 
-1. What is Continuous Deployment (CD)?
-   1. CD is a methodology that reduces the length of feedback cycles for the teams involved in developing and releasing software by introducing automation to the error prone manual stages.
+1. What is Continuous Deployment (CD)? [SLIDE 2]
+   1. CD is a methodology that reduces the length of feedback cycles for the teams involved in developing and releasing software by introducing automation to the error prone manual stages. [SLIDE 3]
    2. A CD Pipeline is a name for the system that brings software through its lifecycle. This normally begins with pre-commit testing and continues through commit testing, packaging of the artifact, automated acceptance testing, deployment to TEST, deployment to STAGE, and deployment to PROD
-   3. What problems does CD address?
-      1. Complex, manual, risky release processes
+   3. What problems does CD address? [SLIDE 4]
+      1. Complex, manual, risky release processes [SLIDE 5]
          1. Done differently every time
          2. Loosely organized
+            1. Various teams completing different tasks at different times
+            2. Not exactly 'clockwork' as time between steps varies
          3. Forgetfulness
          4. Negated by
             1. Automating the complex parts
@@ -18,13 +20,13 @@
                1. If something hurts, do it more often.
                2. Repeating the process more frequently normally will drive us to fix the broken parts that will benefit more than just the one broken process.
                3. If the process is unfixable, doing it more often will at least allow one to get good at it and figure out the ins and outs of the process more quickly (and hopefully documenting it).
-      1. Large size releases
+      1. Large size releases [SLIDE 5]
          1. Longer time between releases == bigger releases
          2. The bigger the release is, the more problematic it can be
             1. Increased complexity decreases the ability to comprehend what exact changes are going into production
             2. Error are more easily overlooked in a 100k line diff
             3. The larger the amount of changing code, the harder it is to narrow down the location of a non-functional (performance, etc..) bug in the codebase
-      1. Siloing of responsibilities (anti-collaboration)
+      1. Siloing of responsibilities (anti-collaboration) [SLIDE 5]
          1. All too often this siloing creeps into the release process. Does something like this sound familar?
             1. Code is “feature complete” for the dev team. They check it in and pass it to QA at or near the end of the sprint.
             2. QA begins testing. Development moves on to the next feature.
@@ -36,10 +38,10 @@
             2. What are those pages?
             3. Did the data-migration get run?
             4. Which data-migration?
-      1. Time to PROD for a feature or bugfix
+      1. Time to PROD for a feature or bugfix [SLIDE 5]
          1. Often a feature can take years to get into production. What if it were days or hours?
          2. Bugfixes benefit from the reduced time to PROD as well.
-      1. Manual labor
+      1. Manual labor [SLIDE 5]
          1. Does anyone here like doing the same thing 3 times?
          2. What if there is a 1 in 3 chance of bringing down production with your name being the one tied to ‘Upgrading production now’ in release chat?
 1. Why would one choose CD?

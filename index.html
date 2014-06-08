@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
     <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
-    <title>Remark</title>
+    <title>Puppet and CD</title>
     <style type="text/css">
       @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
       @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -129,9 +129,13 @@ class: center, middle, inverse
 # Puppet in a Continuous Delivery enviornment
 [mbajor@pingdentity.com]
 .footnote[My Github [page](https://github.com/technolo-g)]
+
 ---
+
 ## What is Continuous Deployment (CD)?
+
 ---
+
 layout: false
 .left-column[
   ## Continuous Deployment
@@ -147,41 +151,36 @@ layout: false
 ]
 
 ---
+name: inverse
+layout: true
+class: center, middle, inverse
+---
 
-# Puppet in a Continuous Deployment enviornment
-
-Matt Bajor
-
-mbajor@pingidentity.com
-
-github.com/technolo-g
+# What problems does CD address?
 
 ---
 
-# What we're talking about here
+layout: false
+.left-column[
+  ## CD adressess the following problems....
+]
+.right-column[
 
-What is Continuous Deployment?
+- Complex, manual, and risky release processes
 
-2. Why would one choose to use a CD pipeline?
-3. What are some important guidelines for CD?
-4. The components of a CD pipeline
-5. Configuration managment with Puppet in a CD pipeline
-6. Demo of a hybrid solution based on Puppet and Ansible
+- Huge releases that nobody can truly understand
 
-![What we're avoiding](images/giphy.gif)
+- Siloing of responsibilities (anti-collaboration)
 
+- Long time to production for a feature or bufix
 
----
+- Manual labor.red[*]
 
-# What is Continuous Deployment?
-
-- CD is a methodology that reduces the length of feedback cycles for the teams involved in developing and releasing software by introducing automation to the error prone manual stages.
-
-
-- A CD Pipeline is a name for the system that brings software through its lifecycle. This normally begins with pre-commit testing and continues through commit testing, packaging of the artifact, automated acceptance testing, deployment to TEST, deployment to STAGE, and deployment to PROD
-
+.footnote[.red[*] Laziness is good! ]
+]
 
 ---
+
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
