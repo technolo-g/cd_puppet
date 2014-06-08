@@ -44,26 +44,29 @@
       1. Manual labor [SLIDE 5]
          1. Does anyone here like doing the same thing 3 times?
          2. What if there is a 1 in 3 chance of bringing down production with your name being the one tied to ‘Upgrading production now’ in release chat?
-1. Why would one choose CD?
-   1. Benefits to developers
+1. Why would one choose CD? [SLIDE 6]
+   1. Benefits to developers [SLIDE 7]
       1. Increased transparency to see what everyone is working on and align their timelines appropriate.
-      2. Reduced feedback cycle
+      2. Reduced feedback cycle [SLIDE 7]
          1. Know tests are broken right away and able to fix
-      1. More enjoyment (less breaking things)
-      2. Higher quality code
+      1. More enjoyment (less breaking things) [SLIDE 7]
+      2. Higher quality code [SLIDE 7]
          1. Automated testing covering a lot more
          2. Able to ship to QA with higher confidence
-   1. Benefits to business types
-      1. Increased transparency into how the product is moving along
+   1. Benefits to business types [SLIDE 8]
+      1. Increased transparency into how the product is moving along [SLIDE 8]
          1. More accurate forecasts
-      1. Better time to feature delivery
-      2. Ability to see where in the process a feature is
-   1. Benefits to QA
+      1. Better time to feature delivery [SLIDE 8]
+      2. More accurate estimations on project timelines [SLIDE 8]
+      3. Abilility to group fully tested, fully functional features into a release [SLIDE 8]
+         1. with the addition of feature flags
+   1. Benefits to QA 
       1. Increased transparency to see how features are coming along and how tests are being developed for the code
       2. Many gates they can close based on automated reports
       3. No longer the bad guy
       4. Ability to share accountability of quality with the development teams
       5. More time to focus on testing that cannot be automated
+      6. Automating out the shittiest part of the work (repetitive, error prone)
    1. Benefits to us (DevOps types)
       1. Increased transparency to see if someone is pushing up a turd that will be waking us up every night
       2. Better application to maintain
