@@ -67,11 +67,12 @@
       4. Ability to share accountability of quality with the development teams [SLIDE 9]
       5. More time to focus on testing that cannot be automated [SLIDE 9]
       6. Automating out the shittiest part of the work (repetitive, error prone) [SLIDE 9]
-   1. Benefits to us (DevOps types)
-      1. Increased transparency to see if someone is pushing up a turd that will be waking us up every night
-      2. Better application to maintain
-      3. Less on-call alerts due to stupid bugs
-      4. More insight into the various processes in software development
+   1. Benefits to us (DevOps types) [SLIDE 10]
+      1. Increased transparency to see if someone is pushing up a turd that will be waking us up every night [SLIDE 11]
+      2. Better application to maintain [SLIDE 11]
+      3. Less on-call alerts due to stupid bugs [SLIDE 11]
+      4. More insight into the various processes in software development [SLIDE 11]
+      5. Higher quality, cleaner enviornments because things that should not be making it in are not [SLIDE 11]
 1. What are some of the guidelines with CD?
    1. Very rigid process. The entire team must be on board as it requires dedication to the process in order to achieve success
    2. First priority is to fix the builds. Having a broken build in the system is a major problem with this process and will stop all development. Keeping builds working must be held as the highest of priorities.
