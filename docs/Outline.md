@@ -60,13 +60,13 @@
       2. More accurate estimations on project timelines [SLIDE 8]
       3. Abilility to group fully tested, fully functional features into a release [SLIDE 8]
          1. with the addition of feature flags
-   1. Benefits to QA 
-      1. Increased transparency to see how features are coming along and how tests are being developed for the code
-      2. Many gates they can close based on automated reports
-      3. No longer the bad guy
-      4. Ability to share accountability of quality with the development teams
-      5. More time to focus on testing that cannot be automated
-      6. Automating out the shittiest part of the work (repetitive, error prone)
+   1. Benefits to QA [SLIDE 9]
+      1. Increased transparency to see how features are coming along and how tests are being developed for the code [SLIDE 9]
+      2. Many gates they can close based on automated reports [SLIDE 9]
+      3. No longer the bad guy [SLIDE 9]
+      4. Ability to share accountability of quality with the development teams [SLIDE 9]
+      5. More time to focus on testing that cannot be automated [SLIDE 9]
+      6. Automating out the shittiest part of the work (repetitive, error prone) [SLIDE 9]
    1. Benefits to us (DevOps types)
       1. Increased transparency to see if someone is pushing up a turd that will be waking us up every night
       2. Better application to maintain
