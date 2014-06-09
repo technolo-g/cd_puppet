@@ -115,36 +115,39 @@
       1. Orchestration and push button releases to PROD [SLIDE 19]
          1. Should be able to roll forward and back
          2. Ideally be able to deploy any version of the application to any environment
-      1. Metrics [Slide 20]
+      1. Metrics [SLIDE 20]
          1. Very important to see behavior over time
          2. Examples
 
-1. Configuration management with Puppet in a CD Pipeline
-   1. Where Puppet excels
+1. Configuration management with Puppet in a CD Pipeline [SLIDE 21]
+   1. Where Puppet excels [SLIDE 22]
       1. Maintaining state
       2. It has built PROD already
       3. Doing what it does
-   1. Where puppet falters
-      1. Dealing with ephemeral hosts
+   1. Where puppet falters [SLIDE 23]
+      1. Dealing with ephemeral hosts [SLIDE 23]
          1. Hosts that come and go do not neccessarily jive with puppet’s model of certificate signing. I have yet to see a super elegant solution that securely allows a node to joing a puppet master and then dissappear again when terminated while keeping the signed certificate list under 1,000,000
-      1. Bootstrapping
+      1. Bootstrapping [SLIDE 23]
          1. Puppet needs it’s daemon to be on the machine and running in order to configure it. While there are some solutions out there to address this (Foreman, Razor) Puppet was not designed to bootstrap itself.
-      1. Orchestration
+      1. Orchestration [SLIDE 23]
          1. Creation of resources via API
             1. standing up ec2 nodes
          1. Running a sequence of events across a group of nodes in real-time
          2. Flipping ELBs to a new version
          3. Creating complex infrastructures from scratch, via API, idempotently, with relational attributes
             1. Standing up a set of security groups with their ndoes
-      1. Strongly ordered operations
+      1. Strongly ordered operations [SLIDE 23]
          1. While puppet allows for (and recommends) the use of chaining arrows, Requires, Befores, and other methods of ordering, it still seems like working against the grain when you just want to run 10 commands in order (like when compiling something from source) and be idempotent about it.
-      1. Running processes that need to be done from multiple machines
+      1. Running processes that need to be done from multiple machines [SLIDE 23]
          1. Go to machine a and run `yum update -y`
          2. Go to machine b and run `./do_data_migration.sh`
          3. Hit the AWS API and run `switch backends on ELB1 to new nodes`
-   1. What tools can supplement Puppet to fill in the gaps?
-      1. Ansible
-         1. Needs only SSH (and sudo) to operate
+
+
+
+   1. What tools can supplement Puppet to fill in the gaps? [SLIDE 24]
+      1. Ansible [SLIDE 25]
+         1. Needs only SSH (and sudo) to operate [SLIDE 26]
          2. Can interact with various APIs and host types
             1. AWS
             2. Rackspace
@@ -154,12 +157,15 @@
             6. Linode
             7. etc…
             8. SSH
-         1. Is strongly ordered by nature
-         2. Very lightweight syntax (YAML)
-         3. Extremely intuitive
-         4. Can delegate tasks to other hosts than where it is being run
+         1. Is strongly ordered by nature [SLIDE 26]
+         2. Very lightweight syntax (YAML) [SLIDE 26]
+         4. Can delegate tasks to other hosts than where it is being run [SLIDE 26]
             1. Adding and removing hosts from a puppet master
-         1.       1. Custom applications
+         5. Can be hard to put a gui on [SLIDE 27]
+         6. Can be expensive if you need to use the paid version
+
+
+         1. Custom applications
          1. Deepthought
             1. uses Rails + fog
          1. Various other projects

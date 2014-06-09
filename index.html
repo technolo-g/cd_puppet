@@ -130,7 +130,7 @@ layout: true
 class: center, middle, inverse
 ---
 # Puppet in a Continuous Delivery enviornment
-[mbajor@pingdentity.com]
+[Matt Bajor | mbajor@pingdentity.com]
 .footnote[My Github [page](https://github.com/technolo-g)]
 
 ---
@@ -146,7 +146,7 @@ layout: false
 .right-column[
   A methodology that reduces the length of feedback cycles for the teams involved in developing and releasing software by introducing automation to the error prone manual stages.
 
-  A Continuous Delivery pipeline.red[*] is a name for the system that brings software through its lifecycle. This normally begins with pre-commit testing and continues through commit testing, packaging of the artifact, automated acceptance testing, deployment to TEST, deployment to STAGE, and deployment to PROD
+  A .red[CD] pipeline is a name for the system that brings software through its lifecycle. This normally begins with pre-commit testing and continues through commit testing, packaging of the artifact, automated acceptance testing, deployment to TEST, deployment to STAGE, and deployment to PROD
 
 ![](images/chart-continuous-delivery.png)
 
@@ -429,6 +429,7 @@ layout: false
 * mcollective
 * funcd
 
+![](images/deepthought.png)
 
 ]
 
@@ -448,6 +449,170 @@ layout: false
 * ZenOSS - System Performance
 
 ]
+
+---
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+
+# CM with Puppet in a .red[CD] pipeline
+
+---
+
+layout: false
+.left-column[
+  ## Where Puppet Excels
+]
+.right-column[
+
+- Maintaining state
+
+- Running production infrastructure
+
+- Being Puppet!
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Where Puppet Sucks
+]
+.right-column[
+
+- Dealing with ephemeral hosts
+
+- Bootstrapping itself
+
+- Orchestration
+    - Creating resources via API
+    - Running a sequence of commands across a group of nodes in real time
+    - Flipping load balancers to a new version of the code
+    - Creating complex infrastructures in the Lazer*
+
+- Strongly ordered operations
+
+- Running a command that needs to utilize multiple machines
+```remark
+# Update the webservers
+ssh webserver yum update -y 
+# Run the data migration
+ssh dbserver ./do_data_migration.sh
+# Add nodes to ELB
+curl https://elb.api.endpoint.com/add_nodes
+```
+
+.footnote[.red[*] Lazer Copyright Beau Christensen]
+
+]
+---
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+
+# So how can we move forwared in this .red[CD] world with Puppet?
+
+---
+
+# Option 1
+![](images/ansible_large.png)
+
+---
+
+layout: false
+.left-column[
+  ## Ansible is a perfect partner to Puppet because
+]
+.right-column[
+
+- Needs only SSH/sudo (No bootstrapping!)
+
+- Can interact with various APIs and host types
+    * All major cloud providers
+    * All major Linux operating systems
+
+- Strongly ordered 
+
+- Very lightweight syntax (YAML)
+
+- Can delegate tasks to other hosts
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Ansible is a perfect partner to Puppet because
+  ## ...but
+]
+.right-column[
+
+If you want to put a GUI on it, it'll cost ya!
+
+- Need to go with the paid version (Tower) which is prohibitively expensive
+
+- Custom programming surrounding it, in which case you might be better off with Option 2
+
+]
+
+---
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+
+# Option 2
+## A custom application
+![](images/deepthought.png)
+
+---
+
+layout: false
+.left-column[
+  ## A custom application can solve all of your needs
+]
+.right-column[
+
+- As flexible as needed
+
+- Interact with any of your providers
+
+- Support only the features you want
+
+- Have a beautiful GUI with RBAC
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## A custom application can solve all of your needs
+  ## but...
+]
+.right-column[
+
+- You have to program it yourself sucka!
+
+]
+
+---
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+
+# In conclusion...
+
+---
+
+In the brave new world of .red[CD], our old friend Puppet does still serve our configuration management needs. It may need a little help from an orchestration tool here and there, but the good news is that Puppet is still fit to serve us for this next cycle of development automation. 
+
+
     </textarea>
     <script src="js/remark-latest.min.js" type="text/javascript">
     </script>
