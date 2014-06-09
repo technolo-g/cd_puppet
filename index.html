@@ -314,6 +314,140 @@ layout: false
 .footnote[.red[*] Scope can be adjusted based on the level of automation to make CD work for most environments ] 
 
 ]
+
+---
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+
+# Components of a .red[CD] pipeline
+
+---
+
+layout: false
+.left-column[
+  ## Version Control
+]
+.right-column[
+
+- Repository for code
+
+- Repository for configuration management
+
+- Important to be able to tie versions of one with the other
+
+## Examples:
+* git
+* mecurial
+* subversion
+
+![](images/git.png)
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Configuration Managment (CM)
+]
+.right-column[
+
+- Provides everything that defines an environment in a consistent and repeatable way
+
+- CM is the foundation of the pipeline. Without being able to recreate an environment automatically, .red[CD] will forever remain out of reach
+
+## Examples:
+* Puppet
+* SaltStack
+* Ansible
+
+![](images/puppet.png)
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## The Build Server
+]
+.right-column[
+
+- Should be able to utilize config management and orchestration to test and deploy code to a production like environment
+
+- Builds (compiles and packages) the software
+
+- Runs unit tests
+
+- Runs automated acceptance tests
+
+- Deploys release canadidates to STAGE (or PROD)
+
+## Examples:
+* Jenkins
+* Thoughtworks Go
+* Bamboo
+
+![](images/jenkins.png)
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Manual Testing (QA's time to shine)
+]
+.right-column[
+
+- Showcasing the new features to the customers (project managers)
+
+- Manual acceptance testing for usability and whether it meets requirements or not
+
+- Exploratory testing to poke around and behave like a normal web user (by breaking everything)
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Orchestration and push button releases to PROD
+]
+.right-column[
+
+- Should allow for the ability to roll back as well as forward
+
+- Should be able to deploy any version of the application to any environment
+
+## Examples:
+* Deepthought (Rails w/ Fog)
+* Ansible 
+* Python's boto
+* mcollective
+* funcd
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Metrics
+]
+.right-column[
+
+- It is very important to see changes in behavior over time
+
+## Examples:
+* Splunk - Error correlation / reporting
+* New Relic - Application Performance
+* ZenOSS - System Performance
+
+]
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
     </script>

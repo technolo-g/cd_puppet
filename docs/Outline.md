@@ -89,47 +89,36 @@
       1. Subverting the process can be easily done and so it is important to have full team buy-in to avoid people skipping the process.
 
 
-1. The components of a CD Pipeline
+1. The components of a CD Pipeline [SLIDE 14]
    1. The components
-      1. Version control
+      1. Version control [SLIDE 15]
          1. Code
          2. Configuration Management
-      1. Build server
+      1. Configuraton management [SLIDE 16]
+         1. Puppet is an example of CM
+         2. Provides everything that defines an environment
+           1. The binary/package used should be the same in any enviornment with only the configuration management defining the differences
+         3. CM is the foundatation for everything. If we cannot replicate an enviornment, then we cannot automate the deploy.  
+      1. Build server [SLIDE 17]
          1. Replicate prod like env with CM + orchestration
          2. Build software
          3. Run unit tests
          4. Run automated acceptance tests
          5. Deploy software to STAGE
-      1. Manual test phase
+      1. Manual test phase [SLIDE 18]
+        Now that QA has been relieved of their duty to run manual test suites over and over again, they can focus on more advanced items that are far harder to provide automation for [SLIDE 18]
          1. Showcasing
          2. Manual acceptance testing
             1. Usability
             2. Meet requirments?
          1. Exploratory testing
-      1. Push button release to PROD
+      1. Orchestration and push button releases to PROD [SLIDE 19]
          1. Should be able to roll forward and back
-         2. Ideally be able to deploy any version of the application
-   1. The technologies
-      1. Version control
-         1. git
-         2. mercurial
-         3. subversion
-      1. Configuration management
-         1. Puppet
-      1. Orchestration
-         1. Python’s boto
-         2. Ruby’s fog
-         3. Ansible
-         4. mcollective
-         5. funcd
-      1. Build server
-         1. Jenkins
-         2. Thoughtworks Go
-         3. Bamboo
-      1. Misc
-         1. NewRelic
-         2. Splunk
-         3. ZenOSS
+         2. Ideally be able to deploy any version of the application to any environment
+      1. Metrics [Slide 20]
+         1. Very important to see behavior over time
+         2. Examples
+
 1. Configuration management with Puppet in a CD Pipeline
    1. Where Puppet excels
       1. Maintaining state
