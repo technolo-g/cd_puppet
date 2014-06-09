@@ -125,18 +125,18 @@
   </head>
   <body>
     <textarea id="source">
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
+
 # Puppet in a Continuous Delivery enviornment
 [Matt Bajor | mbajor@pingdentity.com]
 .footnote[My Github [page](https://github.com/technolo-g)]
-
 ---
 
 ## What is Continuous Deployment (.red[CD])?
-
 ---
 
 layout: false
@@ -149,17 +149,15 @@ layout: false
   A .red[CD] pipeline is a name for the system that brings software through its lifecycle. This normally begins with pre-commit testing and continues through commit testing, packaging of the artifact, automated acceptance testing, deployment to TEST, deployment to STAGE, and deployment to PROD
 
 ![](images/chart-continuous-delivery.png)
-
 ]
-
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
 
 # What problems does .red[CD] address?
-
 ---
 
 layout: false
@@ -169,27 +167,21 @@ layout: false
 .right-column[
 
 - Complex, manual, and risky release processes
-
 - Huge releases that nobody can truly understand
-
 - Siloing of responsibilities (anti-collaboration)
-
 - Long time to production for a feature or bugfix
-
 - Manual labor
 
 ![](images/giphy.gif)
-
 ]
-
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
 
 # Why would one choose .red[CD]?
-
 ---
 
 layout: false
@@ -199,17 +191,11 @@ layout: false
 .right-column[
 
 - Increased transparency to help work better as a team and coordinate more effectively
-
 - Reduced length of feedback cycle
-
 - More enjoyment in programming as things are moving forward
-
 - Objectively higher quality code
-
 - Getting their awesome features to production quicker!
-
 ]
-
 ---
 
 layout: false
@@ -219,17 +205,12 @@ layout: false
 .right-column[
 
 - Increased transparency into the development progress to be able to see how things are progressing
-
 - Less time from commit to cash
-
 - More accurate estimations on future work
-
 - Ability to group fully tested and released features into a sellable press release.red[*]
 
 .footnote[.red[*] The implementation of feature flags is required for this functionality ] 
-
 ]
-
 ---
 
 layout: false
@@ -239,27 +220,20 @@ layout: false
 .right-column[
 
 - Increased transparency to see the work that is coming down the pipeline (and to have an idea as to how quality is progressing in that work)
-
 - Many levers that can be pulled to stop the release process based on objective metrics of quality
-
 - No longer the bad guy as they can reference metrics
-
 - Ability to share accountability of quality with the development teams
-
 - More time to focus on the types of testing that cannot be automated
-
 - Automating the shittiest part of their workflow (repetitive, mundane, error prone testing)
-
 ]
-
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
 
 # Most importantly, how does .red[CD] benefit us DevOps types?
-
 ---
 
 layout: false
@@ -269,30 +243,23 @@ layout: false
 .right-column[
 
 - Increased transparency to see the code coming down the pipeline. More specifically, is Dev pushing a turd through that is going to wake us up every night?
-
 - A better, higher quality, more reliable piece of software to operate
-
 - Less on-call alerts for bugs that should have been caught at first commit
-
 - More insight into the various processes used by the development teams
-
 - Higher quality, cleaner TEST and STAGE environments because shit that is not supposed to make it in does not. 
-
 - No* shitstorm releases!
-
 - Less alcoholism (or more alcoholism)
 
 .footnote[.red[*] Ok, Ok, maybe just fewer shitstorm releases ] 
 ]
-
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
 
 # So what's the catch?
-
 ---
 
 layout: false
@@ -302,27 +269,20 @@ layout: false
 .right-column[
 
 - Implement and follow a very rigid process when publishing code
-
 - Prioritization of fixing builds (#1 Priority)
-
 - Proper configuration management and a high level of automation.red[*]
-
 - NO CHEATING!
 
-
-
 .footnote[.red[*] Scope can be adjusted based on the level of automation to make CD work for most environments ] 
-
 ]
-
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
 
 # Components of a .red[CD] pipeline
-
 ---
 
 layout: false
@@ -332,11 +292,8 @@ layout: false
 .right-column[
 
 - Repository for code
-
 - Repository for configuration management
-
 - Important to be able to tie versions of one with the other
-
 - .red[Duh. If you don't have VCS on your code AND configuration management... We're done here]
 
 ## Examples:
@@ -345,9 +302,7 @@ layout: false
 * subversion
 
 ![](images/git.png)
-
 ]
-
 ---
 
 layout: false
@@ -357,7 +312,6 @@ layout: false
 .right-column[
 
 - Provides everything that defines an environment in a consistent and repeatable way
-
 - CM is the foundation of the pipeline. Without being able to recreate an environment automatically, .red[CD] will forever remain out of reach
 
 ## Examples:
@@ -366,9 +320,7 @@ layout: false
 * Ansible
 
 ![](images/puppet.png)
-
 ]
-
 ---
 
 layout: false
@@ -378,13 +330,9 @@ layout: false
 .right-column[
 
 - Should be able to utilize config management and orchestration to test and deploy code to a production like environment
-
 - Builds (compiles and packages) the software
-
 - Runs unit tests
-
 - Runs automated acceptance tests
-
 - Deploys release candidates to STAGE (or PROD)
 
 ## Examples:
@@ -393,9 +341,7 @@ layout: false
 * Bamboo
 
 ![](images/jenkins.png)
-
 ]
-
 ---
 
 layout: false
@@ -405,13 +351,9 @@ layout: false
 .right-column[
 
 - Showcasing the new features to the customers (project managers)
-
 - Manual acceptance testing for usability and whether it meets requirements or not
-
 - Exploratory testing to poke around and behave like a normal web user (by breaking everything)
-
 ]
-
 ---
 
 layout: false
@@ -421,7 +363,6 @@ layout: false
 .right-column[
 
 - Should allow for the ability to roll back as well as forward
-
 - Should be able to deploy any version of the application to any environment
 
 ## Examples:
@@ -432,9 +373,7 @@ layout: false
 * funcd
 
 ![](images/deepthought.png)
-
 ]
-
 ---
 
 layout: false
@@ -449,17 +388,15 @@ layout: false
 * Splunk - Error correlation / reporting
 * New Relic - Application Performance
 * ZenOSS - System Performance
-
 ]
-
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
 
 # CM with Puppet in a .red[CD] pipeline
-
 ---
 
 layout: false
@@ -469,13 +406,9 @@ layout: false
 .right-column[
 
 - Maintaining state
-
 - Running production infrastructure
-
 - Being Puppet!
-
 ]
-
 ---
 
 layout: false
@@ -485,17 +418,13 @@ layout: false
 .right-column[
 
 - Dealing with ephemeral hosts
-
 - Bootstrapping itself
-
 - Orchestration
     - Creating resources via API
     - Running a sequence of commands across a group of nodes in real time
     - Flipping load balancers to a new version of the code
     - Creating complex infrastructures in the Lazer*
-
 - Strongly ordered operations
-
 - Running a command that needs to utilize multiple machines
 ```remark
 # Update the webservers
@@ -507,21 +436,19 @@ curl https://elb.api.endpoint.com/add_nodes
 ```
 
 .footnote[.red[*] Lazer Copyright Beau Christensen]
-
 ]
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
 
 # So how can we move forward in this .red[CD] world with Puppet?
-
 ---
 
 # Option 1
 ![](images/ansible_large.png)
-
 ---
 
 layout: false
@@ -531,19 +458,13 @@ layout: false
 .right-column[
 
 - Needs only SSH/sudo (No bootstrapping!)
-
 - Can interact with various APIs and host types
-    * All major cloud providers
-    * All major Linux operating systems
-
+    - All major cloud providers
+    - All major Linux operating systems
 - Strongly ordered 
-
 - Very lightweight syntax (YAML)
-
 - Can delegate tasks to other hosts
-
 ]
-
 ---
 
 layout: false
@@ -556,12 +477,10 @@ layout: false
 If you want to put a GUI on it, it'll cost ya!
 
 - Need to go with the paid version (Tower) which is prohibitively expensive
-
 - Custom programming surrounding it, in which case you might be better off with Option 2
-
 ]
-
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
@@ -570,7 +489,6 @@ class: center, middle, inverse
 # Option 2
 ## A custom application
 ![](images/deepthought.png)
-
 ---
 
 layout: false
@@ -580,15 +498,10 @@ layout: false
 .right-column[
 
 - As flexible as needed
-
 - Interact with any of your providers
-
 - Support only the features you want
-
 - Have a beautiful GUI with RBAC
-
 ]
-
 ---
 
 layout: false
@@ -599,31 +512,26 @@ layout: false
 .right-column[
 
 - You have to program it yourself sucka!
-
 ]
-
 ---
+
 name: inverse
 layout: true
 class: center, middle, inverse
 ---
 
 # In conclusion...
-
 ---
 
 In the brave new world of .red[CD], our old friend Puppet is still able to hold it's own in regards to configuring our environments as needed. It may need a little help from an orchestration tool here and there, but Puppet's core feature: configuration management is still as useful as ever.
-
 ---
 
-# 
 # Matt Bajor
 [technolo-g]
 
 ## SRE @ Ping Identity
 ## mbajor@pingidentity.com
 ## github.com/technolo-g
-
 ---
 
 ```
@@ -642,6 +550,7 @@ In the brave new world of .red[CD], our old friend Puppet is still able to hold 
   0. You just DO WHAT THE FUCK YOU WANT TO.
 
 ```
+---
     </textarea>
     <script src="js/remark-latest.min.js" type="text/javascript">
     </script>
