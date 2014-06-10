@@ -10,16 +10,16 @@ presentation. One can read the presentation at these locations:
 
 TODO: Make this happen
 This repositorty should be able to complete the following tasks:
-- Create two SGs in AWS with appropriate rules
-- Create two nodes
-- Configure the base system on both
-- Configure the puppetmaster
-    - install puppetmaster
-    - autosign certs
-    - install a puppet tree from a repo
-- Configure the client
-    - request cert
-    - install ntp
+- ~~Create two SGs in AWS with appropriate rules~~
+- ~~Create two nodes~~
+- ~~Configure the base system on both~~
+- ~~Configure the puppetmaster~~
+    - ~~install puppetmaster~~
+    - ~~autosign certs~~
+    - ~~install a puppet tree from a repo~~
+- ~~Configure the client~~
+    - ~~request cert~~
+    - install ntp # We'll be doing this manually for show
 
 
 
@@ -29,10 +29,29 @@ This repositorty should be able to complete the following tasks:
 brew install ansbile
 ```
 
+## Install boto
+Boto is a python client for AWS's API. Unfortunately
+it does not like virtualenv and so one must install
+it as root.
+
+```
+sudo pip install boto
+``
+
+Then you must configure ~/.boto with your credentails
+
+```
+$ cat ~/.boto
+[Credentials]
+aws_access_key_id = YOURACCESSKEYID
+aws_secret_access_key = YOuRsecRetAcceSSkey939
+```
+
 ## How to use it
 ## Instructions Unclear!?
 
 ```
+git clone https://github.com/technolo-g/cd_puppet.git
 cd ansible/
 ansible-playbook -i hosts demo_playbook.yaml
 ```
