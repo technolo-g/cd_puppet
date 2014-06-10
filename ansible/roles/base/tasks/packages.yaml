@@ -4,6 +4,7 @@
   sudo: true
   apt: pkg={{ item }} state=installed
   with_items:
+    - puppet
     - git
     - vim
     - tree

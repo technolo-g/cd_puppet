@@ -18,7 +18,7 @@
   user: ubuntu
   roles:
     - base
-    #- { role: puppet, function: server }
+    - puppet_master
 
 
 - name: Configure the puppetclient

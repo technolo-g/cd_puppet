@@ -1,0 +1,5 @@
+---
+
+- name: install the puppetmaster package
+  sudo: true
+  apt: pkg=puppetmaster state=installed
