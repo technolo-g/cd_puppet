@@ -8,17 +8,15 @@ presentation. One can read the presentation at these locations:
 
 ## What it should do
 
-TODO: Make this happen
-This repositorty should be able to complete the following tasks:
-- ~~Create two SGs in AWS with appropriate rules~~
-- ~~Create two nodes~~
-- ~~Configure the base system on both~~
-- ~~Configure the puppetmaster~~
-    - ~~install puppetmaster~~
-    - ~~autosign certs~~
-    - ~~install a puppet tree from a repo~~
-- ~~Configure the client~~
-    - ~~request cert~~
+- Create two SGs in AWS with appropriate rules
+- Create two nodes
+- Configure the base system on both
+- Configure the puppetmaster
+    - install puppetmaster
+    - autosign certs
+    - install a puppet tree from a repo
+- Configure the client
+    - request cert
     - install ntp # We'll be doing this manually for show
 
 
