@@ -53,3 +53,4 @@ git clone https://github.com/technolo-g/cd_puppet.git
 cd ansible/
 ansible-playbook -i hosts demo_playbook.yaml
 ```
+![](images/giphy.gif)
