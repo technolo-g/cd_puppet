@@ -3,3 +3,5 @@
 - include: sg_master.yaml
 
 - include: sg_client.yaml
+
+- include: compute_node.yaml

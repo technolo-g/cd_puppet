@@ -5,12 +5,24 @@
   gather_facts: no
   vars:
     region: us-west-2
+    version: 2014060903
+    keypair: mbajor-mbpr
+    instance_type: t1.micro
+    ami_id: ami-f34032c3
+    vpc_id: vpc-6df8f30f
   roles:
     - ec2
 
-- name: Configure hosts
-  hosts: ec2_nodes
+- name: Configure the puppetmaster
+  hosts: puppetmaster
   user: ubuntu
   roles:
     - base
-    - { role: puppet, function: server }
+    #- { role: puppet, function: server }
+
+
+- name: Configure the puppetclient
+  hosts: puppetclient
+  user: ubuntu
+  roles:
+    - base
