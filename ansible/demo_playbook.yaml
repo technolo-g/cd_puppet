@@ -4,12 +4,12 @@
   hosts: local
   gather_facts: no
   vars:
-    region: us-west-2
-    version: 2014060905
+    region: us-west-1
+    version: 2014060908
     keypair: mbajor-mbpr
     instance_type: t1.micro
-    ami_id: ami-f34032c3
-    vpc_id: vpc-6df8f30f
+    ami_id: ami-a26265e7
+    vpc_id: vpc-70676f12
   roles:
     - ec2
 
