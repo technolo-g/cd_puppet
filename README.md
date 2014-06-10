@@ -3,6 +3,7 @@
 This repository contains the demo for the Puppet Meetup
 presentation. One can read the presentation at these locations:
 
+* [Meetup] (http://www.meetup.com/Denver-Puppet-User-Group/events/184000272/)
 * [Slides] (http://technolo-g.github.io/cd_puppet/)
 * [Outline] (https://github.com/technolo-g/cd_puppet/blob/gh-pages/README.md)
 
