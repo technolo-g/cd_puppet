@@ -18,3 +18,7 @@
     repo=https://github.com/technolo-g/cd_puppet.git
     dest=/etc/puppet
     version=puppet-tree
+
+- name: restart puppet
+  sudo: true
+  service: name=puppetmaster state=reloaded
