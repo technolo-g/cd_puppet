@@ -1,0 +1,22 @@
+---
+
+- name: puppet client security group
+  local_action:
+    module: ec2_group
+    name: PuppetClientSecurityGroup
+    state: present
+    description: A security group for the puppet clients
+    region: "{{ region }}"
+
+- name: puppet master security group
+  local_action:
+    module: ec2_group
+    name: PuppetMasterSecurityGroup
+    state: present
+    description: A security group for the puppetmaster
+    region: "{{ region }}"
+    rules:
+      - proto: tcp
+        from_port: 8140
+        to_port: 8140
+        group_name: PuppetClientSecurityGroup

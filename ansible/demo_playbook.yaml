@@ -3,6 +3,8 @@
 - name: Create EC2 infrastructure
   hosts: local
   gather_facts: no
+  vars:
+    region: us-west-2
   roles:
     - ec2
 
