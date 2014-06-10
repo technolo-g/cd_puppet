@@ -1,3 +1,0 @@
-# This is for the EC2 module
-[local]
-localhost ansible_connection=local

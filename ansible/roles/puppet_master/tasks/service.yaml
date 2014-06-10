@@ -1,8 +1,0 @@
----
-
-- name: enable the puppetmaster service
-  sudo: true
-  service: >
-    name=puppetmaster
-    state=started
-    enabled=true
