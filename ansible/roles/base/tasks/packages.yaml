@@ -1,0 +1,10 @@
+---
+
+- name: install needed packages
+  sudo: true
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - git
+    - vim
+    - tree
+    - telnet
