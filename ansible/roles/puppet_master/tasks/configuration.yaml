@@ -1,0 +1,20 @@
+---
+
+- name: clear out the directory
+  sudo: true
+  command: rm -rf /etc/puppet
+
+- name: make directory for puppet shit
+  sudo: true
+  file: >
+    path=/etc/puppet
+    state=directory
+    owner=puppet
+    group=puppet
+
+- name: clone our puppet shit
+  sudo: true
+  git: >
+    repo=https://github.com/technolo-g/cd_puppet.git
+    dest=/etc/puppet
+    version=puppet-tree
