@@ -21,6 +21,14 @@
     groupname: puppetmaster
   with_items: puppetmaster.instances
 
+
+- name: create the puppet client config
+  local_action:
+    module: template
+    src: puppet.conf.j2
+    dest: ./roles/base/files/puppet.conf
+  with_items: puppetmaster.instances
+
 - name: provision puppetclient in EC2
   local_action:
     module: ec2

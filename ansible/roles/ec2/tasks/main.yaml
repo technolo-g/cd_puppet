@@ -1,7 +1,7 @@
 ---
 
-- include: sg_master.yaml
-
 - include: sg_client.yaml
+
+- include: sg_master.yaml
 
 - include: compute_node.yaml

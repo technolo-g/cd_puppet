@@ -33,5 +33,6 @@ brew install ansbile
 ## Instructions Unclear!?
 
 ```
-vagrant up
+cd ansible/
+ansible-playbook -i hosts demo_playbook.yaml
 ```
