@@ -3,27 +3,34 @@
 This repository contains the demo for the Puppet Meetup
 presentation. One can read the presentation at these locations:
 
+* [Meetup] (http://www.meetup.com/Denver-Puppet-User-Group/events/184000272/)
 * [Slides] (http://technolo-g.github.io/cd_puppet/)
 * [Outline] (https://github.com/technolo-g/cd_puppet/blob/gh-pages/README.md)
 
 ## What it should do
 
-TODO: Make this happen
-This repositorty should be able to complete the following tasks:
-- ~~Create two SGs in AWS with appropriate rules~~
-- ~~Create two nodes~~
-- ~~Configure the base system on both~~
-- ~~Configure the puppetmaster~~
-    - ~~install puppetmaster~~
-    - ~~autosign certs~~
-    - ~~install a puppet tree from a repo~~
-- ~~Configure the client~~
-    - ~~request cert~~
+- Create two SGs in AWS with appropriate rules
+- Create two nodes
+- Configure the base system on both
+- Configure the puppetmaster
+    - install puppetmaster
+    - autosign certs
+    - install a puppet tree from a repo
+- Configure the client
+    - request cert
     - install ntp # We'll be doing this manually for show
 
 
 
 ## Setting it up
+
+### Upload your public key
+
+You must upload your public key to AWS in the region in which
+you are deploying prior to running the ansible script. 
+Upload it and call it `meetup-demo` in the us-west-2 region for
+this version
+
 ### Install Ansible
 ```shell
 brew install ansbile
@@ -36,7 +43,7 @@ it as root.
 
 ```
 sudo pip install boto
-``
+```
 
 Then you must configure ~/.boto with your credentails
 
@@ -55,3 +62,4 @@ git clone https://github.com/technolo-g/cd_puppet.git
 cd ansible/
 ansible-playbook -i hosts demo_playbook.yaml
 ```
+![](images/giphy.gif)
