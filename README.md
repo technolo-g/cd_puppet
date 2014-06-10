@@ -36,7 +36,7 @@ it as root.
 
 ```
 sudo pip install boto
-``
+```
 
 Then you must configure ~/.boto with your credentails
 
