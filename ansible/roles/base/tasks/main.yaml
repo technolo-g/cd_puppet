@@ -5,3 +5,5 @@
   apt: update_cache=yes cache_valid_time=3600
 
 - include: packages.yaml
+
+- include: puppet_config.yaml

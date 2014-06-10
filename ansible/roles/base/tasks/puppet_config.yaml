@@ -1,0 +1,14 @@
+---
+
+- name: install the puppet config
+  sudo: true
+  copy: >
+    src=puppet.conf
+    dest=/etc/puppet/puppet.conf
+    owner=root
+    group=root
+    mode=0644
+
+- name: enable puppet
+  sudo: true
+  command: puppet agent --enable
