@@ -1,0 +1,14 @@
+---
+
+- name: Create EC2 infrastructure
+  hosts: local
+  gather_facts: no
+  roles:
+    - ec2
+
+- name: Configure hosts
+  hosts: ec2_nodes
+  user: ubuntu
+  roles:
+    - base
+    - { role: puppet, function: server }
