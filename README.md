@@ -28,7 +28,7 @@ presentation. One can read the presentation at these locations:
 
 You must upload your public key to AWS in the region in which
 you are deploying prior to running the ansible script. 
-Upload it and call it `meetup-demo` in the us-west-2 region for
+Upload it and call it `meetup-demo` in the us-west-1 region for
 this version
 
 ### Install Ansible
