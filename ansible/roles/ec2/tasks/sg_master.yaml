@@ -1,0 +1,15 @@
+---
+
+- name: puppet master security group
+  local_action:
+    module: ec2_group
+    name: PuppetMasterSecurityGroup
+    state: present
+    description: A security group for the puppet masters
+    vpc_id: "{{ vpc_id }}"
+    region: "{{ region }}"
+    rules:
+      - proto: tcp
+        from_port: 22
+        to_port: 22
+        cidr_ip: 0.0.0.0/0
