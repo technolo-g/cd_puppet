@@ -10,7 +10,7 @@ node default {
   zk_watcher::add { 'ntp':
     port    => '123',
     cmd     => 'pgrep ntp',
-    path    => '/services/production/uswest1/ntp',
+    path    => '/services/production/${::certname}/ntp',
     data    => ['zone=uswest1a', 'user=mbajor'],
     refresh => '60';
   }
