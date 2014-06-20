@@ -29,7 +29,7 @@
     dest: ./roles/base/files/puppet.conf
   with_items: puppetmaster.instances
 
-- name: provision puppetclient in EC2
+- name: provision puppetclients in EC2
   local_action:
     module: ec2
     state: present
@@ -40,10 +40,10 @@
     image: "{{ ami_id }}"
     wait: true
     region: "{{ region }}"
-    count: 1
+    count: 2
   register: puppetclient
 
-- name: add puppetclient to hostgroup
+- name: add puppetclients to hostgroup
   local_action:
     module: add_host
     hostname: "{{ item.public_ip }}"
