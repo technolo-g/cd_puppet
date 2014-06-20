@@ -17,3 +17,7 @@
         from_port: 8140
         to_port: 8140
         group_name: PuppetClientSecurityGroup
+      - proto: tcp
+        from_port: 2181
+        to_port: 2181
+        group_name: PuppetClientSecurityGroup
