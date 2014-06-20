@@ -7,8 +7,9 @@ respawn
 
 limit nofile 8192 8192
 
-script
-    exec start-stop-daemon --start -c root --name zk_watcher \
-        --exec /usr/local/bin/zk_watcher -- start --foreground
-end script
+#script
+#    exec start-stop-daemon --start -c root --name zk_watcher \
+#        --exec /usr/local/bin/zk_watcher -- start --foreground
+#end script
 
+exec /usr/local/bin/zk_watcher -v -l -s 172.31.6.108:2181

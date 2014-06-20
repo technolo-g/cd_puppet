@@ -21,7 +21,7 @@ class zk_watcher::service {
   file {
     '/etc/init/zk_watcher.conf':
     ensure  => present,
-    source  => 'puppet:///modules/zk/upstart',
+    source  => 'puppet:///modules/zk_watcher/upstart',
     notify  => Service['zk_watcher'],
     require => Class['zk_watcher'];
 
