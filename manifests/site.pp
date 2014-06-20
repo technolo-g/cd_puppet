@@ -20,7 +20,7 @@ node default {
   }
 
   # Retrieve the list of servers
-  $servers = zkget('/services/production/ntp', 0, 1)
+  $servers = zkget('/services/production/ntp', 0, 10)
 
   # Display the list of servers
   notify { "There are $servers in the cluster": }
