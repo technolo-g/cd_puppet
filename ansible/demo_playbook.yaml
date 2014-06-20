@@ -5,7 +5,7 @@
   gather_facts: no
   vars:
     region: us-west-2
-    version: 2014060909
+    version: 2014061501
     keypair: meetup-demo
     instance_type: t1.micro
     ami_id: ami-f34032c3
