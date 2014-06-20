@@ -1,0 +1,5 @@
+---
+
+- name: start and enalble the zookeeper service
+  sudo: true
+  service: name=zookeeper state=started enabled=true

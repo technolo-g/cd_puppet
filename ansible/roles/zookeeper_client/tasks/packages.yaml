@@ -1,0 +1,16 @@
+---
+
+- name: install the requirements
+  sudo: true
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - ruby1.9.1-dev
+    - make
+
+- name: install the needed gems
+  sudo: true
+  command: gem install --version 1.9.4 zk creates=/var/lib/gems/1.9.1/gems/zk-1.9.4
+
+- name: install the needed gems
+  sudo: true
+  command: gem install --version 1.0 filecache creates=/var/lib/gems/1.9.1/gems/filecache-1.0

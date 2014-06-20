@@ -1,0 +1,7 @@
+---
+
+- include: packages.yaml
+
+- include: configure.yaml
+
+- include: service.yaml

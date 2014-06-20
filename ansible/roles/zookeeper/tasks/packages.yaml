@@ -1,0 +1,8 @@
+---
+
+- name: install the zookeeper packages
+  sudo: true
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - zookeeperd
+    - zookeeper-bin
