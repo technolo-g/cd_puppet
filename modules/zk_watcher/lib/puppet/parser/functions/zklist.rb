@@ -20,7 +20,7 @@
 #
 # Example Usage:
 #   require 'zklist.rb'
-#   zk = ZKList.new( server = "localhost", port = "2182", cache_timeout = 3600 )
+#   zk = ZKList.new( server = "localhost", port = "2181", cache_timeout = 3600 )
 #   children = zk.get( "/services/production/uswest1/memcache" )
 #
 #   children.each do |kid|

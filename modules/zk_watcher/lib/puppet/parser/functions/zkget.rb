@@ -31,7 +31,7 @@ module Puppet::Parser::Functions
     path  = args[0]
     min = args[1].to_i
     max = args[2].to_i
-    zk = ZKList.new(server="localhost", port="2182", cache_timeout=172800)
+    zk = ZKList.new(server="localhost", port="2181", cache_timeout=172800)
 
     begin
       # Get a list of servers from zk.get.
