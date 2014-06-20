@@ -12,4 +12,4 @@ limit nofile 8192 8192
 #        --exec /usr/local/bin/zk_watcher -- start --foreground
 #end script
 
-exec /usr/local/bin/zk_watcher -v -l -s <%= $::serverip %>:2181
+exec /usr/local/bin/zk_watcher -v -l -s <%= serverip %>:2181
